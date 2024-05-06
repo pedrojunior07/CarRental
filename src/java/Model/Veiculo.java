@@ -13,7 +13,7 @@ import java.io.Serializable;
 public abstract class  Veiculo implements Serializable  {
     int Id;
   private String categoria,  tipoDeComustivel, fabricante;
-  private int anoDeFabrico, idProduto;
+  private int anoDeFabrico;
   private double preco;
 
     public int getId() {
@@ -57,13 +57,6 @@ public abstract class  Veiculo implements Serializable  {
         this.anoDeFabrico = anoDeFabrico;
     }
 
-    public int getIdProduto() {
-        return idProduto;
-    }
-
-    public void setIdProduto(int idProduto) {
-        this.idProduto = idProduto;
-    }
 
     public double getPreco() {
         return preco;

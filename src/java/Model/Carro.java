@@ -12,18 +12,36 @@ import java.util.Calendar;
  * @author Pedro
  */
 public class Carro extends Veiculo implements carrosMetodos, Serializable {
-private String modelo, tracao;
-private int numMotor, numChassi, quilometosPercoridos;
-private boolean vendido, operacional;
-private int fornecedorId, cor;
+private String modelo, tracao, descricao;
+private int  quilometosPercoridos ,dirId;
+private boolean disponivel;
+private String  cor;
+String[] diretorios;
 
-    public int getCor() {
-        return cor;
+    public String getDescricao() {
+        return descricao;
     }
 
-    public void setCor(int cor) {
-        this.cor = cor;
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
+
+    public boolean isDisponivel() {
+        return disponivel;
+    }
+
+    public void setDisponivel(boolean disponivel) {
+        this.disponivel = disponivel;
+    }
+
+    public String[] getDiretorios() {
+        return diretorios;
+    }
+
+    public void setDiretorios(String[] diretorios) {
+        this.diretorios = diretorios;
+    }
+
 
     public int getId() {
         return Id;
@@ -33,25 +51,23 @@ private int fornecedorId, cor;
         this.Id = Id;
     }
 
+    public int getDirId() {
+        return dirId;
+    }
+
+    public void setDirId(int dirId) {
+        this.dirId = dirId;
+    }
+
+    public String getCor() {
+        return cor;
+    }
+
+    public void setCor(String cor) {
+        this.cor = cor;
+    }
+
     
-
-private Fornecedor fornecedor;
-
-    public int getFornecedorId() {
-        return fornecedorId;
-    }
-
-    public void setFornecedorId(int fornecedorId) {
-        this.fornecedorId = fornecedorId;
-    }
-
-    public Fornecedor getFornecedor() {
-        return fornecedor;
-    }
-
-    public void setFornecedor(Fornecedor fornecedor) {
-        this.fornecedor = fornecedor;
-    }
 
     public String getModelo() {
         return modelo;
@@ -69,21 +85,7 @@ private Fornecedor fornecedor;
         this.tracao = tracao;
     }
 
-    public int getNumMotor() {
-        return numMotor;
-    }
-
-    public void setNumMotor(int numMotor) {
-        this.numMotor = numMotor;
-    }
-
-    public int getNumChassi() {
-        return numChassi;
-    }
-
-    public void setNumChassi(int numChassi) {
-        this.numChassi = numChassi;
-    }
+   
 
     public int getQuilometosPercoridos() {
         return quilometosPercoridos;
@@ -93,21 +95,8 @@ private Fornecedor fornecedor;
         this.quilometosPercoridos = quilometosPercoridos;
     }
 
-    public boolean isVendido() {
-        return vendido;
-    }
-
-    public void setVendido(boolean vendido) {
-        this.vendido = vendido;
-    }
-
-    public boolean isOperacional() {
-        return operacional;
-    }
-
-    public void setOperacional(boolean operacional) {
-        this.operacional = operacional;
-    }
+   
+ 
 
     
     
