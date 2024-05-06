@@ -18,6 +18,9 @@ private boolean disponivel;
 private String  cor;
 String[] diretorios;
 
+//SEGUROS
+
+
     public String getDescricao() {
         return descricao;
     }

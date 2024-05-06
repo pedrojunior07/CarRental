@@ -2,6 +2,7 @@
 package Model;
 
 import java.io.Serializable;
+import java.sql.Date;
 import javax.swing.ImageIcon;
 /**
  *
@@ -11,7 +12,8 @@ import javax.swing.ImageIcon;
  */
 
 public class Cliente implements Serializable {
-    private String nome,sexo, apelido, naturalidade, identidade, estadocivil, eMail,dataNascimento,senha;
+    private String nome,sexo, apelido, naturalidade, identidade, estadocivil, eMail,senha, localizacao;
+    private Date dataNascimento;
     private int idade, Id, telefone;
 
     public String getNome() {
@@ -20,12 +22,32 @@ public class Cliente implements Serializable {
     public void setNome(String nome) {
         this.nome = nome;
     }
-    public String getDataNascimento() {
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+
+    public String getLocalizacao() {
+        return localizacao;
+    }
+
+    public void setLocalizacao(String localizacao) {
+        this.localizacao = localizacao;
+    }
+
+    public Date getDataNascimento() {
         return dataNascimento;
     }
-    public void setDataNascimento(String dataNascimento) {
+
+    public void setDataNascimento(Date dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
+
+    
     public String getSexo() {
         return sexo;
     }
