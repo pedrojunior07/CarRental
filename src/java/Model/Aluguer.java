@@ -9,29 +9,33 @@ package Model;
  * @author Pedro
  */
 import java.sql.Date;
+
 public class Aluguer {
-    private Carro carro;
-    private Cliente Cliente;
+    
+    
+    private int IdCarro,idCliente;
     private Date dataInicio;
     private Date dataFim;
     private Boolean status;
     private double Preco;
 
-    public Carro getCarro() {
-        return carro;
+   
+    public int getIdCarro() {
+        return IdCarro;
     }
 
-    public void setCarro(Carro carro) {
-        this.carro = carro;
+    public void setIdCarro(int IdCarro) {
+        this.IdCarro = IdCarro;
     }
 
-    public Cliente getCliente() {
-        return Cliente;
+    public int getIdCliente() {
+        return idCliente;
     }
 
-    public void setCliente(Cliente Cliente) {
-        this.Cliente = Cliente;
+    public void setIdCliente(int idCliente) {
+        this.idCliente = idCliente;
     }
+
 
     public Date getDataInicio() {
         return dataInicio;
@@ -65,10 +69,10 @@ public class Aluguer {
         this.Preco = Preco;
     }
     
-    public void Alugar(Date inicio, Date fim, Carro carro,Cliente cliente){
-    this.Cliente = cliente;
+    public void Alugar(Date inicio, Date fim, int carro,int cliente){
+    this.idCliente = cliente;
     this.Preco = 00;
-    this.carro = carro;
+    this.idCliente = carro;
     this.dataInicio = inicio;
     this.dataFim = fim;
     this.status = true;
