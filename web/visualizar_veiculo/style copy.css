@@ -1,0 +1,84 @@
+
+
+.input-container {
+    margin-bottom: -50px;
+}
+
+.input-container input[type="date"] {
+    width: 200px;
+    padding: 5px;
+    margin: 70px;
+    
+    border: none;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    color:#22262a;
+    outline: none;
+    transition: background-color 0.3s;
+}
+
+.input-container input[type="date"]::-webkit-calendar-picker-indicator {
+
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+
+    background-size: cover;
+    cursor: pointer;
+}
+
+.input-container input[type="date"]:hover {
+    background-color: white;
+}
+
+.input-container label {
+
+    top: -25px;
+    margin: 0px;
+    left: 0px;
+    font-size: 20px;
+    color: white;
+    transition: top 0.3s, font-size 0.3s, color 0.2s;
+}
+
+.input-container input[type="date"]:focus + label,
+.input-container input[type="date"]:valid + label {
+    top: -35px;
+    font-size: 12px;
+    color: #555;
+}
+
+/* Hide the default arrow on Edge and Firefox */
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+.botao2 .button{
+    
+    background: var(--background, var(--carolina-purple));
+    color: var(--color, var(--white));
+    min-width: var(--width, 40px);
+    min-height: var(--height, 40px);
+    padding: 5px;
+    display: grid;
+    place-items: center;
+    border-radius: var(--radius-14);
+    font-family: var(--ff-nunito);
+    font-size: var(--fs-6);
+    font-weight: var(--fw-600);
+    overflow: hidden;
+    margin-top: 250px;
+    width: 100px;
+    margin-left: 300px;
+} 
+
+.button2{
+    margin-top: 200px;
+    width: 10px;
+
+
+}

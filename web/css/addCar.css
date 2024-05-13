@@ -1,0 +1,115 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 08/05/2024, 22:00:02
+    Author     : Pedro
+*/
+
+:root{
+    --color-white: #fff;
+    --color-red: #e63636;
+    --color-dark1:  rgb(19, 21, 21);
+    --color-dark2: rgb(28, 184, 158);
+    --color-purple1: #1dee70;
+    --color-purple2: rgb(34, 232, 119);
+}
+
+
+
+.formulario{
+    display: flex;
+    /*justify-content: space-around;*/
+    flex-direction: row;
+    
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.conteiner{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    /* border-radius: 10px; */
+/*    min-width: 30%;
+    max-width: 80%;
+    overflow: auto;*/
+
+}
+
+h1{
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.content form{
+   
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.span-required{
+    font-size: 12px;
+    margin: 3px 0 0 1px;
+    color: var(--color-red);
+    display: none;
+}
+
+.inputs{
+    padding: 8px 5px;
+    outline: none;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 2px solid #1dee70;
+    color:#4e4444;
+    width: 70%;
+    box-sizing: border-box;
+    transition: .3s;
+    margin: 1vh;
+    
+}
+
+.inputs:focus{
+    border-color: var(--color-purple1);
+}
+
+.box-select{
+    display: flex;
+    justify-content: space-evenly;
+    font-weight: bold;
+    gap: 1rem;
+}
+
+button[type="submit"]{
+    padding: 1rem;
+    font-size: 1rem;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    background-color: var(--color-purple2);
+    color: var(--color-white);
+    cursor: pointer;
+    transition: .3s;
+}
+.select
+{
+    width:100%;
+    
+}
+
+button[type="submit"]:hover{
+    background-color: var(--color-purple1);
+}
+
+@media screen and (max-width: 576px) {
+    .box-select{
+        flex-direction: column;
+        gap: 5px;
+    }
+}

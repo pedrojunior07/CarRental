@@ -1,25 +1,58 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package Model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Calendar;
 
 /**
  *
+ * 
  * @author Pedro
+ * 
+ * 
  */
 public class Carro extends Veiculo implements carrosMetodos, Serializable {
-private String modelo, tracao, descricao;
-private int  quilometosPercoridos ,dirId;
+private String modelo, tracao, descricao, matricula;
+private int  quilometosPercoridos,km_litro,assentos;
 private boolean disponivel;
 private String  cor;
-String[] diretorios;
+private ArrayList<String> images;
 
-//SEGUROS
 
+public ArrayList<String> getImages() {
+        return images;
+    }
+
+    public void setImages(ArrayList<String> images) {
+        this.images = images;
+    }
+
+    public int getKm_litro() {
+        return km_litro;
+    }
+
+    public void setKm_litro(int km_litro) {
+        this.km_litro = km_litro;
+    }
+
+    public int getAssentos() {
+        return assentos;
+    }
+
+    public void setAssentos(int assentos) {
+        this.assentos = assentos;
+    }
+
+
+
+    public String getMatricula() {
+        return matricula;
+    }
+
+    public void setMatricula(String matricula) {
+        this.matricula = matricula;
+    }
 
     public String getDescricao() {
         return descricao;
@@ -37,15 +70,6 @@ String[] diretorios;
         this.disponivel = disponivel;
     }
 
-    public String[] getDiretorios() {
-        return diretorios;
-    }
-
-    public void setDiretorios(String[] diretorios) {
-        this.diretorios = diretorios;
-    }
-
-
     public int getId() {
         return Id;
     }
@@ -54,14 +78,7 @@ String[] diretorios;
         this.Id = Id;
     }
 
-    public int getDirId() {
-        return dirId;
-    }
-
-    public void setDirId(int dirId) {
-        this.dirId = dirId;
-    }
-
+   
     public String getCor() {
         return cor;
     }
@@ -98,18 +115,6 @@ String[] diretorios;
         this.quilometosPercoridos = quilometosPercoridos;
     }
 
-   
- 
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
     @Override
     public int getIdadeDoVeiculo(int anoDeFabrico) {
       Calendar c = Calendar.getInstance(); 

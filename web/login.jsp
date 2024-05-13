@@ -1,7 +1,7 @@
 <%-- 
-    Document   : index
-    Created on : 12/05/2024, 15:34:44
-    Author     : Pedro
+    Document   : login
+    Created on : May 7, 2024, 1:45:56 PM
+    Author     : FRANCE
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -10,10 +10,8 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
-         <link rel="stylesheet" href="./style.css">
-        <link rel="stylesheet" href="css/addCar.css"/>
     </head>
     <body>
-        <jsp:forward page="./indexcliente.jsp" />
+        <h1>Saiste</h1>
     </body>
 </html>

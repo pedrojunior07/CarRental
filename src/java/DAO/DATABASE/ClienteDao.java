@@ -16,9 +16,10 @@ public class ClienteDao {
     public ClienteDao(Connection connection) {
         this.connection = connection;
     }
+   
 
     public static void insertCliente(Cliente cliente) throws SQLException {
-        String sql = "INSERT INTO cliente (nome, sexo, apelido, naturalidade, identidade, estadocivil, email, senha, localizacao, dataNascimento, idade, telefone) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO `cliente` (`nome`, `sexo`, `apelido`, `naturalidade`, `identidade`, `estadocivil`, `email`, `senha`, `localizacao`, `dataNascimento`, `idade`, `telefone`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
         PreparedStatement statement = connection.prepareStatement(sql);
 

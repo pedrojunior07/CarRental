@@ -32,13 +32,11 @@ public class CarroDao {
        this.connection = connection;
     }
  
-    public static void insertBaseDedados(Carro user) throws SQLException {
+    public static boolean insertBaseDedados(Carro user) throws SQLException {
 
-        String sql ="INSERT INTO `carro` ( `modelo`, `tracao`, `categoria`, `fabricante`"
-                + ", `anoDeFabrico`, `quilometrosPercoridos`,  "
-                + "`preco`, `disponivel`, "
+        String sql ="INSERT INTO `carro` ( `modelo`, `tracao`, `categoria`, `fabricante`, `anoDeFabrico`, `quilometrosPercoridos`,`preco`, `disponivel` "
                 + ", `tipoDeComustivel`"
-                + ",`cor`,`descricao`,`dirId`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?)";
+                + ",`cor`,`descricao`,`matricula`,`assentos`,`km_litro`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 
        PreparedStatement statement = connection.prepareStatement(sql);
        
@@ -53,22 +51,23 @@ public class CarroDao {
        statement.setString(9, user.getTipoDeComustivel());
        statement.setString(10,user.getCor());
        statement.setString(11, user.getDescricao());
-       statement.setInt(12, user.getDirId());
+       statement.setString(12, user.getMatricula());
+       statement.setInt(13, user.getAssentos());
+       statement.setInt(14, user.getKm_litro());
                
-       statement.execute();
-        connection.close();
-        JOptionPane.showMessageDialog(null, "Carro Salvo  com Sucesso", "Base De Dados",
-                    JOptionPane.INFORMATION_MESSAGE);  
+        boolean execute = statement.execute();
+       
+        return execute;
     }
     
     
-     public static boolean updateVendedor(Carro user) throws SQLException {
+     public static boolean updateCarro(Carro user) throws SQLException {
         String sql = "UPDATE `carro` SET `modelo`=?, `tracao`=?, `categoria`=?,"
                 + " `fabricante`=?,"
                 + " `anoDeFabrico`=?, " +
                      "`quilometrosPercoridos`=?,  `preco`=?,"
                 + " `disponivel`=?,  "
-                + "`tipoDeComustivel`=?, `dirID`= ?,"
+                + "`tipoDeComustivel`=?, "
                 + "`descriicao` =?, `cor`= ?" +
                    
                      "WHERE `Id`=?";
@@ -82,10 +81,9 @@ public class CarroDao {
        statement.setDouble(7,  user.getPreco());
        statement.setBoolean(8, user.isDisponivel());
        statement.setString(9, user.getTipoDeComustivel());
-       statement.setInt(10, user.getDirId());
-       statement.setString(11, user.getDescricao());
-       statement.setString(12, user.getCor());
-       statement.setInt(13, user.getId());
+       statement.setString(10, user.getDescricao());
+       statement.setString(11, user.getCor());
+       statement.setInt(12, user.getId());
                  
             int rowsUpdated = statement.executeUpdate();
             return rowsUpdated > 0;
@@ -125,13 +123,14 @@ public class CarroDao {
                 user.setCategoria(resultSet.getString("categoria"));
                 user.setFabricante(resultSet.getString("fabricante"));
                 user.setDisponivel(resultSet.getBoolean("disponivel"));
-          
                 user.setAnoDeFabrico(resultSet.getInt("anoDeFabrico"));
                 user.setTipoDeComustivel(resultSet.getString("tipoDeComustivel"));
-                user.setDirId(resultSet.getInt("dirId"));
                 user.setCor(resultSet.getString("cor"));
                 user.setDescricao(resultSet.getString("descricao"));
                 user.setPreco(resultSet.getDouble("preco"));
+                user.setMatricula(resultSet.getString("matricula"));
+                user.setAssentos(resultSet.getInt("assentos"));
+                user.setKm_litro(resultSet.getInt("km_litro"));
                 
           usuarios.add(user);
          }
@@ -140,7 +139,7 @@ public class CarroDao {
       
      
      public static Carro selectPorId(int id)throws SQLException{    
-     String sql = "select * from usuario where  Id = ? ";
+     String sql = "select * from carro where  Id = ? ";
      PreparedStatement statement = connection.prepareStatement(sql);
      statement.setInt(1,id);
     return  pesquisa(statement).get(0);  

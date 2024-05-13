@@ -23,7 +23,7 @@ public class Conexao {
  
             Class.forName("com.mysql.cj.jdbc.Driver");
             
-            String url = "jdbc:MySQL://localhost:3306/concecinaria2.0";
+            String url = "jdbc:MySQL://localhost:3306/car_rental";
             String user = "root";
             String pass = "";
             
