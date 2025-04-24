@@ -8,6 +8,7 @@ import DAO.FinacasDao;
 import Model.Carro;
 import Model.Financas;
 import Model.Vendedor;
+import java.io.Serializable;
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;
@@ -20,7 +21,7 @@ import javax.swing.JOptionPane;
  *
  * @author Pedro
  */
-public class CarroDao {
+public class CarroDao implements Serializable{
       
     
     

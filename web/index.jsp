@@ -14,6 +14,6 @@
         <link rel="stylesheet" href="css/addCar.css"/>
     </head>
     <body>
-        <jsp:forward page="./indexcliente.jsp" />
+        <jsp:forward page="./indexAdmin.jsp" />
     </body>
 </html>

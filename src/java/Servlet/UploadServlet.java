@@ -42,7 +42,7 @@ public class UploadServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             // Diretório onde os arquivos serão salvos
-            String uploadDir = "C:\\Users\\Pedro\\Documents\\GitHub\\CarRental\\web\\carImages"; // Caminho absoluto para o diretório de uploads
+            String uploadDir = "C:\\Users\\Pedro Manjate\\Documents\\GitHub\\CarRental\\web\\carImages"; // Caminho absoluto para o diretório de uploads
 
             // Obtém todas as partes do request
             String  matricula = request.getParameter("matricula");

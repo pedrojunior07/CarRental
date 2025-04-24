@@ -14,10 +14,43 @@ import java.util.Calendar;
  */
 public class Carro extends Veiculo implements carrosMetodos, Serializable {
 private String modelo, tracao, descricao, matricula;
-private int  quilometosPercoridos,km_litro,assentos;
-private boolean disponivel;
+private int  quilometosPercoridos,km_litro,assentos, numChassi, numMotor ;
+private boolean disponivel,aluguer, avariado;
+
 private String  cor;
 private ArrayList<String> images;
+
+    public int getNumChassi() {
+        return numChassi;
+    }
+
+    public void setNumChassi(int numChassi) {
+        this.numChassi = numChassi;
+    }
+
+    public int getNumMotor() {
+        return numMotor;
+    }
+
+    public void setNumMotor(int numMotor) {
+        this.numMotor = numMotor;
+    }
+
+    public boolean isAluguer() {
+        return aluguer;
+    }
+
+    public void setAluguer(boolean aluguer) {
+        this.aluguer = aluguer;
+    }
+
+    public boolean isAvariado() {
+        return avariado;
+    }
+
+    public void setAvariado(boolean avariado) {
+        this.avariado = avariado;
+    }
 
 
 public ArrayList<String> getImages() {
